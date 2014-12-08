@@ -1,0 +1,32 @@
+﻿@model CadeMeuMedico.Models.Cidades
+
+@{
+    ViewBag.Title = "Excluir";
+}
+
+<h2>Excluir</h2>
+
+<h3>Você tem certeza que deseja excluir esta Cidade?</h3>
+<fieldset>
+    <legend>Cidades</legend>
+
+    <div class="display-label">
+         @Html.DisplayNameFor(model => model.IDCidade)
+    </div>
+    <div class="display-field">
+        @Html.DisplayFor(model => model.IDCidade)
+    </div>
+
+    <div class="display-label">
+         @Html.DisplayNameFor(model => model.Nome)
+    </div>
+    <div class="display-field">
+        @Html.DisplayFor(model => model.Nome)
+    </div>
+</fieldset>
+@using (Html.BeginForm()) {
+    <p>
+        <input type="submit" value="Exlcuir" /> |
+        @Html.ActionLink("Voltar para a lista", "Index")
+    </p>
+}

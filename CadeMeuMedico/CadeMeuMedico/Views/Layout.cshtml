@@ -1,0 +1,58 @@
+﻿@{
+    Layout = null;
+}
+
+<!DOCTYPE html>
+
+<html>
+<head>
+    <meta name="viewport" content="width=device-width" />
+    <title>Cade meu médico? - @ViewBag.Title</title>
+    <link href="@Url.Content("~/Content/bootstrap/bootstrap.min.css")" rel="stylesheet" />
+    <style>
+        body
+        {
+            padding-top: 60px;
+        }
+    </style>
+</head>
+<body>
+    <div class="navbar navbar-inverse navbar-fixed-top">
+        <div class="container">
+            <div class="navbar-header">
+                <a class="navbar-brand" href="#">
+                    Cade meu Médico?
+                </a>
+            </div>
+            <div class="collapse navbar-collapse">
+                <ul id="Menu" class="nav navbar-nav">
+                    <li class="active">
+                        @Html.ActionLink("Home", "Index", "Home")
+                    </li>
+                    <li id="menuMedicos">
+                        @Html.ActionLink("Médicos", "Index", "Medicos")
+                    </li>
+                    <li id="menuCidades">
+                        @Html.ActionLink("Cidades", "Index", "Cidades")
+                    </li>
+                    <li id="menuEspecialidades">
+                        @Html.ActionLink("Especialidades", "Index", "Especialidades")
+                    </li>
+                </ul>
+            </div>
+        </div>
+    </div>
+    
+    <div class="container">
+        @RenderBody()
+    </div>
+
+    <script src="@Url.Content("~/Scripts/jquery-2.1.1.min.js")">
+    </script>
+    <script src="@Url.Content("~/Scripts/bootstrap.min.js")">
+    </script>
+    <script src="@Url.Content("~/Scripts/MudaMenu.js")">
+    </script>
+    @RenderSection("script", required: false)
+</body>
+</html>

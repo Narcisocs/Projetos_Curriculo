@@ -1,0 +1,95 @@
+﻿@model CadeMeuMedico.Models.Medicos
+
+@{
+    ViewBag.Title = "Excluir";
+}
+
+<h2>Excluir</h2>
+
+<h3>Você tem certeza que deseja excluir este Médico?</h3>
+<fieldset>
+    <legend>Medicos</legend>
+
+    <div class="display-label">
+         @Html.DisplayNameFor(model => model.IDMedico)
+    </div>
+    <div class="display-field">
+        @Html.DisplayFor(model => model.IDMedico)
+    </div>
+
+    <div class="display-label">
+         @Html.DisplayNameFor(model => model.CRM)
+    </div>
+    <div class="display-field">
+        @Html.DisplayFor(model => model.CRM)
+    </div>
+
+    <div class="display-label">
+         @Html.DisplayNameFor(model => model.Nome)
+    </div>
+    <div class="display-field">
+        @Html.DisplayFor(model => model.Nome)
+    </div>
+
+    <div class="display-label">
+         @Html.DisplayNameFor(model => model.Endereco)
+    </div>
+    <div class="display-field">
+        @Html.DisplayFor(model => model.Endereco)
+    </div>
+
+    <div class="display-label">
+         @Html.DisplayNameFor(model => model.Bairro)
+    </div>
+    <div class="display-field">
+        @Html.DisplayFor(model => model.Bairro)
+    </div>
+
+    <div class="display-label">
+         @Html.DisplayNameFor(model => model.Email)
+    </div>
+    <div class="display-field">
+        @Html.DisplayFor(model => model.Email)
+    </div>
+
+    <div class="display-label">
+         @Html.DisplayNameFor(model => model.AtendePorConvenio)
+    </div>
+    <div class="display-field">
+        @Html.DisplayFor(model => model.AtendePorConvenio)
+    </div>
+
+    <div class="display-label">
+         @Html.DisplayNameFor(model => model.TemClinica)
+    </div>
+    <div class="display-field">
+        @Html.DisplayFor(model => model.TemClinica)
+    </div>
+
+    <div class="display-label">
+         @Html.DisplayNameFor(model => model.WebsiteBlog)
+    </div>
+    <div class="display-field">
+        @Html.DisplayFor(model => model.WebsiteBlog)
+    </div>
+
+    <div class="display-label">
+         @Html.DisplayNameFor(model => model.IDCidade)
+    </div>
+    <div class="display-field">
+        @Html.DisplayFor(model => model.IDCidade)
+    </div>
+
+    <div class="display-label">
+         @Html.DisplayNameFor(model => model.IDEspecialidade)
+    </div>
+    <div class="display-field">
+        @Html.DisplayFor(model => model.IDEspecialidade)
+    </div>
+</fieldset>
+@using (Html.BeginForm()) {
+    <p>
+        <input type="submit" value="Excluir" /> |
+        @Html.ActionLink("Voltar para a lista", "Index")
+    </p>
+}
